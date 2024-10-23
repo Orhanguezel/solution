@@ -2,22 +2,10 @@
 
 // task-1
 
-function startsWithLosOrNew(cityName){
-    let strCityName = cityName.toLowerCase();
-    
-    if (strCityName.length < 3) {
-        return false;
-    }
-    
-    let kntrl = "";
-
-    for ( let i=0; i<3; i++){
-        kntrl+=strCityName[i];
-    }
-        if( kntrl === "los" || kntrl === "new"){
-            return true;
-        } return false;
-    } 
+function startsWithLosOrNew(cityName) {
+    const strCityName = cityName.toLowerCase();
+    return strCityName.slice(0, 3) === 'los' || strCityName.slice(0, 3) === 'new';
+}
    
 
 console.log(startsWithLosOrNew("New York"));
@@ -30,9 +18,7 @@ console.log(startsWithLosOrNew("new"));
 
 // task-2
 function isDivisibleBy100(num){
-    if(num % 100 === 0){
-        return true;
-    } return false;
+   return num %100 ===0;
 
 }
 
@@ -43,7 +29,7 @@ console.log(isDivisibleBy100(100));
 // task-3
 
 function isRaining(trueOrFalse){
-   return (trueOrFalse === true) ?  "wet day - you need an umbrella" : "dry day - leave your umbrella at home";
+   return trueOrFalse ?  "wet day - you need an umbrella" : "dry day - leave your umbrella at home";
 }
 
 console.log(isRaining(true));
