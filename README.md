@@ -1,5 +1,4 @@
 
-```md
 # JavaScript Solutions - Task Descriptions
 
 ## Task 1 - Starts with Los or New?
